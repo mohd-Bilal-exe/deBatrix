@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-dm-serif-display: "DM Serif Display", serif;
+  --font-inter: "Inter", sans-serif;
+  --font-clash-grotesk: "Clash Grotesk", sans-serif;
+  --font-plus-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+  /* === Font Styles === */
+  --font-style-normal: normal;
+  --font-style-italic: italic;
+  --font-optical-auto: auto;
+
+  /* === Letter Spacing === */
+  --tracking-widestestcum: 0.18em;
+  --tracking-widestest: 0.28em;
+  --tracking-zaydawide: 0.35em;
+
+  /* === Colors === */
+  --color-offWhite: #FAF9F6;
+  --color-bgDark: #121212;
+  --color-geminiPrimary: #1981FE;
+  --color-geminiPrimarylt: #6CB2FF;
+  --color-geminiSecondary: #B195FE;
+  --color-geminiSecondarylt: #E1CFFF;
+
+  /* === Screens === */
+  --screen-smartphone: 640px;
+
+  /* === Drop Shadows === */
+  --shadow-text-sm: 1px 1px 1px rgba(0, 0, 0, 0.60);
+  --shadow-text-md: 1px 2px 0px rgba(0, 0, 0, 0.60);
+  --shadow-text-lg: 1px 4px 0px rgba(10, 10, 10, 0.60);
+
+  /* === Font Sizes === */
+  --text-xxs: clamp(0.75rem, calc(0.65rem + 0.22vw), 0.88rem);
+  --text-xs: clamp(0.88rem, calc(0.75rem + 0.27vw), 1.00rem);
+  --text-sm: clamp(1.00rem, calc(0.92rem + 0.39vw), 1.20rem);
+  --text-md: clamp(1.13rem, calc(0.98rem + 0.73vw), 1.50rem);
+  --text-lg: clamp(1.27rem, calc(1.03rem + 1.19vw), 1.88rem);
+  --text-xl: clamp(1.42rem, calc(1.06rem + 1.80vw), 2.34rem);
+  --text-2xl: clamp(1.60rem, calc(1.08rem + 2.59vw), 2.93rem);
+  --text-3xl: clamp(1.80rem, calc(1.08rem + 3.63vw), 3.66rem);
+  --text-4xl: clamp(2.03rem, calc(1.03rem + 4.98vw), 4.58rem);
+  --text-5xl: clamp(2.28rem, calc(0.94rem + 6.71vw), 5.72rem);
+  --text-6xl: clamp(2.57rem, calc(0.78rem + 8.95vw), 7.15rem);
+  --text-7xl: clamp(3.10rem, calc(0.78rem + 10.50vw), 8.57rem);
+  --text-8xl: clamp(3.75rem, calc(0.78rem + 12.70vw), 10.25rem);
+
+  /* === Animation === */
+  --animation-aurora: aurora 60s linear infinite;
+
+  /* === Dark Mode Selector === */
+  --dark-mode-selector: .dark;
+}

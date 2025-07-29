@@ -5,11 +5,7 @@ export async function createChatInstance({history, uid, type}: {history: any[], 
     model: "gemini-2.5-flash",
     history: history,
   });
-   console.log(
-    `${type} instance created for user ${uid} \n Chat: `,state.users[uid][type]
-  )
   return await chat;
- 
 }
 export function sendForChatMessage({content, role, userId}: {content: string, role: string, userId: string}) {
   if (!state.users[userId].forChatInstance) {

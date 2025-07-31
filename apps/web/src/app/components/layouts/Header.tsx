@@ -9,7 +9,7 @@ export default function Header() {
       <div className="font-thin text-lg tracking-wider">Debatrix</div>
       <div className="group overflow-hidden font-clash-grotesk text-2xl tracking-wider">
         <div className="group px-3 py-2 text-xs tracking-wide">
-          <Link href="/debate">Get Started <ArrowRightIcon size={16} className="inline transition-transform group-hover:translate-x-1 duration-200 ease-in-out" /></Link></div>
+          <Link href="/debate">Wanna try? <ArrowRightIcon size={16} className="inline transition-transform group-hover:translate-x-1 duration-200 ease-in-out" /></Link></div>
       <div className="flex justify-between items-center w-[200%] h-0.5 transition-all -translate-x-1/2 group-hover:translate-x-[0%] duration-500 ease-in-out">
         <div className="flex w-1/2 h-0.5">
         {colorBand.map((color, index) => (

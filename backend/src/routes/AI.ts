@@ -3,6 +3,7 @@ import { PrismaClient } from "@prisma/client";
 import { createChatInstance } from "../messages/helpers/chatInstance";
 import { againstDebatePrompt, forDebatePrompt, introPrompt } from "../global/prompts";
 import sendMessage from "../messages/helpers/sendMessage";
+import gemini from "../api/gem_init";
 const state = require("../global/states");
 
 const prisma = new PrismaClient();
@@ -103,7 +104,7 @@ res.json({ message: "Against chat initialized" });
 
 router.post("/for-chat-send", async (req, res) => {
   const { message, uid } = req.body;
-  const forChatInstance = state.users[uid].forChatInstance;
+  const forChatInstance = state.users[uid]?.forChatInstance||null;
   if (!forChatInstance) {
     return res.status(400).json({ error: "For chat instance is not initialized", forChatInstance });
   }
@@ -112,7 +113,7 @@ router.post("/for-chat-send", async (req, res) => {
 });
 router.post("/against-chat-send", async (req, res) => {
   const { message, uid } = req.body;
-  const againstChatInstance = state.users[uid].againstChatInstance;
+  const againstChatInstance = state.users[uid]?.againstChatInstance;
   if (!againstChatInstance) {
     return res.status(400).json({ error: "For chat instance is not initialized" });
   }

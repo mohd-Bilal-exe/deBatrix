@@ -5,12 +5,12 @@ export default function ChatBox({chatMessage, role}:{chatMessage: string, role:"
   const isPro = role === "against";
   const isCon = role === "for";
 
-  const baseStyles = "text-white max-w-[90%] px-4 py-3 rounded-xl shadow-md whitespace-pre-wrap leading-relaxed tracking-wider text-sm font-light";
+  const baseStyles = "text-white max-w-[90%] px-4 py-3 whitespace-pre-wrap leading-relaxed tracking-wider text-sm ";
 
   const roleStyles = isPro
-    ? " text-emerald-100 self-start"
+    ? " self-start"
     : isCon
-    ? " text-rose-100 self-end"
+    ? "  self-end"
     : "bg-neutral-700 text-white self-center";
 
 

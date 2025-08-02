@@ -14,7 +14,7 @@ export default function Debatepage() {
  // const [forChatProperties, setForChatProperties] = useState<CHATPROPERTIES>(); 
  // const [againstChatProperties, setAgainstChatProperties] = useState<CHATPROPERTIES>(); 
 
-useEffect(() => {
+/*useEffect(() => {
     const lenis = new Lenis({
       lerp: 0.06,duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -34,7 +34,7 @@ useEffect(() => {
     return () => {
       lenis.destroy();
     };
-  }, []);
+  }, []);*/
   
   return (
     <div className="flex flex-col justify-start items-center bg-gradient-to-br from-bgDark/80 via-bgDark/90 to-bgDark w-screen min-h-screen font-outfit text-white">

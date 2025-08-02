@@ -1,9 +1,9 @@
-export type CHATHISTORY=[
+export type CHATHISTORY=
     {
         role:string,
-        content:string
+        message:string
     }
-]
+
 export type CHATPROPERTIES={
     topic:string; mood:string; tone:string; persona:string; egHuman:string;
 }

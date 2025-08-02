@@ -54,3 +54,27 @@
   /* === Dark Mode Selector === */
   --dark-mode-selector: .dark;
 }
+::-webkit-scrollbar {
+  position: fixed;
+  right: 0;
+  width: 2px;
+  
+}
+::-webkit-scrollbar:horizontal {
+  display: none;
+}
+::-webkit-scrollbar-track {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: rgba(16, 16, 16, 0);
+}
+::-webkit-scrollbar-thumb {
+  background: #ffffffa0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #252422;
+}
+::-webkit-scrollbar-corner {
+  display: none; /* Hide the bottom scrollbar */
+}

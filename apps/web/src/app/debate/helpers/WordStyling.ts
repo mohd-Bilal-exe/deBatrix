@@ -14,20 +14,20 @@ export function getClassForStyle(word: string, role: string): string {
   const isItalic = /^\*{1}.+\*{1}$/.test(cleanWord);
   const isQuoted = /^["'].+["']$/.test(cleanWord);
 
-    const base = "inline-block px-0.5 mx-[2px] rounded-md transition-all duration-150 hover:shadow-md ";
+    const base = "inline-block tracking-wide px-0.5 mx-[2px] rounded-md transition-all duration-150 hover:shadow-md ";
 
   const palette = role === "for"
     ? {
-        boldItalic: " border border-emerald-500 text-emerald-800 font-bold italic ",
-        bold: "text-emerald-700 font-bold",
-        italic: "  text-emerald-600 italic",
-        quoted: "bg-emerald-100/5 px-2 text-emerald-500 font-semibold",
+        boldItalic: " border border-emerald-500 text-emerald-800 font-bold italic font-dm-serif-display ",
+        bold: "text-emerald-700 font-bold font-space-grotesk",
+        italic: "  text-emerald-600 italic font-outfit",
+        quoted: "bg-emerald-100/5 px-2 text-emerald-500 font-semibold tracking-widest font-dm-serif-display",
       }
     : {
-        boldItalic: " border border-rose-500 text-rose-800 font-bold italic shadow-sm",
-        bold: " text-rose-700 font-bold",
-        italic: "text-rose-600 italic",
-        quoted: "bg-rose-200/10 px-2 border border-rose-200/5 text-rose-500 font-semibold",
+        boldItalic: " border border-rose-500 text-rose-800 font-bold italic shadow-sm font-dm-serif-display",
+        bold: " text-rose-700 font-bold font-space-grotesk",
+        italic: "text-rose-600 italic font-outfit",
+        quoted: "bg-rose-200/10 px-2 border border-rose-200/5 text-rose-500 font-semibold tracking-widest font-dm-serif-display",
       };
 
   if (isBoldItalic) return `${base} ${palette.boldItalic}`;

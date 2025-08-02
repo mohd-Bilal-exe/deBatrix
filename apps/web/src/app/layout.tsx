@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "./components/layouts/Header";
-import Footer from "./components/layouts/Footer";
 import localFont from "next/font/local";
 
 const DMSerifDisplay = localFont({
@@ -24,7 +22,7 @@ const clashGrotesk= localFont({
 });
 
 const plusJakarta= localFont({
-  src: "./fonts/PlusJakarta/plusJakartaSans.ttf",
+  src: "./fonts/PlusJakarta/PlusJakartaSans.ttf",
   variable: "--font-plus-jakarta",
   weight: "100 900"
 });

@@ -1,6 +1,6 @@
 export type CHATHISTORY=
     {
-        role:string,
+        role:"for"|"against",
         message:string
     }
 

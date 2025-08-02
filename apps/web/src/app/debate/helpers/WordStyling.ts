@@ -14,27 +14,28 @@ export function getClassForStyle(word: string, role: string): string {
   const isItalic = /^\*{1}.+\*{1}$/.test(cleanWord);
   const isQuoted = /^["'].+["']$/.test(cleanWord);
 
-  let classes = "p-[2px] line-height-2";
+    const base = "inline-block px-0.5 mx-[2px] rounded-md transition-all duration-150 hover:shadow-md ";
 
-  if (isBoldItalic) {
-    classes += role === "for" 
-      ? " font-bold italic bg-emerald-400/10 border border-emerald-400/30 rounded-md px-2 mx-[2px]"
-      : " font-bold italic bg-red-400/10 border border-red-400/30 rounded-md px-2 mx-[2px]";
-  } else if (isBold) {
-    classes += role === "for"
-      ? " font-bold bg-emerald-300/10 border border-emerald-300/30 rounded-md px-2 mx-[2px]"
-      : " font-bold bg-red-300/10 border border-red-300/30 rounded-md px-2 mx-[2px]";
-  } else if (isItalic) {
-    classes += role === "for"
-      ? " italic bg-emerald-200/10 border border-emerald-200/30 rounded-md px-2 mx-[2px]"
-      : " italic bg-red-200/10 border border-red-200/30 rounded-md px-2 mx-[2px]";
-  } else if (isQuoted) {
-    classes += role === "for"
-      ? " text-emerald-300 italic border-emerald-500"
-      : " text-red-300 italic border-red-500";
-  }
+  const palette = role === "for"
+    ? {
+        boldItalic: " border border-emerald-500 text-emerald-800 font-bold italic ",
+        bold: "text-emerald-700 font-bold",
+        italic: "  text-emerald-600 italic",
+        quoted: "bg-emerald-100/5 px-2 text-emerald-500 font-semibold",
+      }
+    : {
+        boldItalic: " border border-rose-500 text-rose-800 font-bold italic shadow-sm",
+        bold: " text-rose-700 font-bold",
+        italic: "text-rose-600 italic",
+        quoted: "bg-rose-200/10 px-2 border border-rose-200/5 text-rose-500 font-semibold",
+      };
 
-  return classes;
+  if (isBoldItalic) return `${base} ${palette.boldItalic}`;
+  if (isBold) return `${base} ${palette.bold}`;
+  if (isItalic) return `${base} ${palette.italic}`;
+  if (isQuoted) return `${base} ${palette.quoted}`;
+
+  return "px-[2px]";
 }
 
 export function tokenizeMarkdownText(text: string): string[] {

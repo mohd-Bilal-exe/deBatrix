@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { formatWord, getClassForStyle, tokenizeMarkdownText } from "../helpers/WordStyling";
 import { motion } from "framer-motion";
-export default function ChatBox({chatMessage, role}:{chatMessage: string, role: string}){
+export default function ChatBox({chatMessage, role}:{chatMessage: string, role:"for"|"against"}){
   const isPro = role === "against";
   const isCon = role === "for";
 
@@ -26,7 +26,7 @@ export default function ChatBox({chatMessage, role}:{chatMessage: string, role: 
     
 }
 
-const ChatWords=({message, role}:{message: string, role:string})=>{ 
+const ChatWords=({message, role}:{message: string, role:"for"|"against"})=>{ 
 const [visibleWords, setVisibleWords] = useState<string[]>([]);  
     const words = tokenizeMarkdownText(message);
     
